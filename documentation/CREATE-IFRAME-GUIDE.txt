@@ -1,0 +1,117 @@
+═══════════════════════════════════════════════════════════════
+  🎯 CREATE YOUR PAYMOB IFRAME - Step by Step
+═══════════════════════════════════════════════════════════════
+
+You're seeing the "Add iFrame" form because you don't have one yet.
+Let me help you fill it out correctly!
+
+═══════════════════════════════════════════════════════════════
+
+📝 FILL OUT THE FORM:
+
+┌─────────────────────────────────────────────────────────────┐
+│ 1️⃣ Name                                                      │
+│    Enter: AuraVibe Card Payment                             │
+│    (Or any name you prefer - it's just for your reference)  │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 2️⃣ Description                                               │
+│    Enter: Payment page for AuraVibe luxury watches          │
+│    (Optional - can leave empty)                             │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 3️⃣ Html Content                                              │
+│    LEAVE EMPTY (use default Paymob design)                  │
+│    OR paste custom HTML if you want custom styling          │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 4️⃣ Javascript Content                                        │
+│    LEAVE EMPTY (use default Paymob functionality)           │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 5️⃣ CSS Content                                               │
+│    LEAVE EMPTY (use default Paymob styling)                 │
+│    OR add custom CSS if you want brand colors               │
+└─────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+💡 RECOMMENDED: Keep Everything Default!
+
+For your first iFrame, just fill:
+✅ Name: AuraVibe Card Payment
+✅ Leave all other fields EMPTY
+
+Click "Submit"
+
+═══════════════════════════════════════════════════════════════
+
+📋 AFTER CLICKING SUBMIT:
+
+1. Paymob will create your iFrame
+2. You'll see it in the iFrames list
+3. Copy the iFrame ID (it will be a number like: 876543)
+4. Update your .env file:
+   
+   PAYMOB_IFRAME_ID=876543  ← Replace with YOUR actual ID
+
+═══════════════════════════════════════════════════════════════
+
+🎨 OPTIONAL: Custom Styling (Advanced)
+
+If you want to match your brand colors later, you can add CSS:
+
+CSS Content example:
+```css
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1a1a1a;
+}
+
+.payment-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+}
+
+button.pay-button {
+    background: #D4AF37 !important;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+button.pay-button:hover {
+    background: #C19B2C !important;
+}
+```
+
+But for now, use default styling!
+
+═══════════════════════════════════════════════════════════════
+
+✅ QUICK STEPS:
+
+1. Fill Name: "AuraVibe Card Payment"
+2. Leave everything else empty
+3. Click "Submit"
+4. Copy the iFrame ID you get
+5. Update .env file with that ID
+6. Restart your server
+7. Test checkout - it will work! 🎉
+
+═══════════════════════════════════════════════════════════════
+
+🔗 IMPORTANT NOTE:
+
+The iFrame you create will work with ALL your integration IDs:
+- Card Payment (5362354)
+- Mobile Wallet (5362355)
+- Tap on Phone (5362356)
+
+You only need ONE iFrame for all payment methods!
+
+═══════════════════════════════════════════════════════════════

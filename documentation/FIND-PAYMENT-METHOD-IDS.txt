@@ -1,0 +1,102 @@
+═══════════════════════════════════════════════════════════════
+  🔍 HOW TO FIND YOUR PAYMENT METHOD IDs
+═══════════════════════════════════════════════════════════════
+
+ERROR: "Integration ID/Name does not exist in our system"
+
+The payment method IDs (1 for Card, 47 for Wallet) are DEMO IDs.
+You need YOUR actual IDs from YOUR Paymob account.
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 1: Log in to Paymob Dashboard
+   → https://accept.paymob.com/portal2/en/login
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 2: Navigate to Payment Integrations
+
+   Left Sidebar:
+   ┌─────────────────────┐
+   │  Dashboard          │
+   │  Transactions       │
+   │  Orders             │
+   │  ▼ Developers       │  ← Click this
+   │    ├ API Keys        │
+   │    ├ Webhooks        │
+   │    ├ Integrations    │  ← Then click this
+   │    └ iFrames         │
+   │  Settings            │
+   └─────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 3: Find Your Payment Integration IDs
+
+   You'll see a list like this:
+
+   ┌──────────────────────────────────────────────────┐
+   │ Payment Integrations                              │
+   ├──────────────────────────────────────────────────┤
+   │                                                   │
+   │  ✓ Card Payment (Online)                         │
+   │    Integration ID: 5362354  ← COPY THIS!        │
+   │    Status: Active                                 │
+   │                                                   │
+   │  ✓ Mobile Wallet                                 │
+   │    Integration ID: 5362355  ← COPY THIS!        │
+   │    Status: Active                                 │
+   │                                                   │
+   └──────────────────────────────────────────────────┘
+
+   **IMPORTANT**: These are YOUR integration IDs (not payment method IDs!)
+
+═══════════════════════════════════════════════════════════════
+
+📝 WHAT TO DO:
+
+The Unified Checkout API uses Integration IDs directly, not payment method IDs!
+
+Copy YOUR integration IDs and update your .env file:
+
+```env
+# In /home/believer/auravibe/.env
+
+# Update these with YOUR actual Integration IDs from dashboard:
+PAYMOB_INTEGRATION_ONLINE_CARD=5362354    ← Replace with YOUR Card ID
+PAYMOB_INTEGRATION_MOBILE_WALLET=5362355  ← Replace with YOUR Wallet ID
+```
+
+═══════════════════════════════════════════════════════════════
+
+🔧 IMPORTANT NOTE:
+
+The Unified Checkout API works differently:
+- OLD API: Used Integration IDs in backend
+- NEW API: Uses Integration IDs as "payment_methods" in the request
+
+Your Integration IDs ARE the payment method IDs for Unified Checkout!
+
+═══════════════════════════════════════════════════════════════
+
+✅ AFTER UPDATING .env:
+
+1. The IDs you already have (5362354, 5362355, 5362356) might be correct!
+2. Verify in Paymob Dashboard → Developers → Integrations
+3. Make sure they match
+4. Restart server: ./start.sh
+5. Try checkout again
+
+═══════════════════════════════════════════════════════════════
+
+💡 QUICK CHECK:
+
+Your .env currently has:
+PAYMOB_INTEGRATION_ONLINE_CARD=5362354
+PAYMOB_INTEGRATION_TAP_ON_PHONE=5362355
+PAYMOB_INTEGRATION_MOBILE_WALLET=5362356
+
+Go to dashboard and verify these EXACT numbers appear in your
+"Payment Integrations" list!
+
+═══════════════════════════════════════════════════════════════

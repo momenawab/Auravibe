@@ -1,0 +1,137 @@
+═══════════════════════════════════════════════════════════════
+  📋 PAYMOB DEFAULT IFRAME CODE
+═══════════════════════════════════════════════════════════════
+
+Since HTML/JS/CSS are required, copy and paste these into the form:
+
+═══════════════════════════════════════════════════════════════
+
+1️⃣ NAME:
+AuraVibe Card Payment
+
+═══════════════════════════════════════════════════════════════
+
+2️⃣ DESCRIPTION:
+Payment page for AuraVibe luxury watches
+
+═══════════════════════════════════════════════════════════════
+
+3️⃣ HTML CONTENT:
+Copy this entire block ↓
+
+<div class="payment-container">
+    <div class="payment-header">
+        <h2>Complete Your Payment</h2>
+        <p>Secure payment powered by Paymob</p>
+    </div>
+    <div id="card-element"></div>
+</div>
+
+═══════════════════════════════════════════════════════════════
+
+4️⃣ JAVASCRIPT CONTENT:
+Copy this entire block ↓
+
+// Paymob default payment initialization
+(function() {
+    // Payment form will be auto-injected by Paymob
+    console.log('Paymob payment form loaded');
+})();
+
+═══════════════════════════════════════════════════════════════
+
+5️⃣ CSS CONTENT:
+Copy this entire block ↓
+
+.payment-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-header h2 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.payment-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+#card-element {
+    padding: 20px 0;
+}
+
+/* Paymob form styling */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #C19B2C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+═══════════════════════════════════════════════════════════════
+
+📝 STEPS TO FOLLOW:
+
+1. In the Paymob "Add iFrame" form:
+   - Name: AuraVibe Card Payment
+   - Description: Payment page for AuraVibe luxury watches
+   - Html Content: Paste the HTML code above
+   - Javascript Content: Paste the JS code above
+   - CSS Content: Paste the CSS code above
+
+2. Click "Submit"
+
+3. After creation, you'll see your iFrame with an ID
+
+4. Copy that iFrame ID (example: 876543)
+
+5. Update your .env file:
+   PAYMOB_IFRAME_ID=876543  ← Your actual ID
+
+6. Restart server and test!
+
+═══════════════════════════════════════════════════════════════
+
+✅ This will create a clean, professional payment page with your
+   AuraVibe gold branding (#D4AF37) that matches your site!
+
+═══════════════════════════════════════════════════════════════

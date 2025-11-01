@@ -1,0 +1,118 @@
+═══════════════════════════════════════════════════════════════
+  🎯 QUICK FIX: Get Your Paymob iFrame ID
+═══════════════════════════════════════════════════════════════
+
+PROBLEM: Your iFrame ID is currently set to your Integration ID (5362354)
+         These are TWO DIFFERENT things!
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 1: Log in to Paymob
+   → https://accept.paymob.com/portal2/en/login
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 2: Navigate to iFrames
+
+   Left Sidebar:
+   ┌─────────────────────┐
+   │  Dashboard          │
+   │  Transactions       │
+   │  Orders            │
+   │  ▼ Developers      │  ← Click this
+   │    ├ API Keys       │
+   │    ├ Webhooks       │
+   │    ├ Integrations   │
+   │    └ iFrames        │  ← Then click this
+   │  Settings           │
+   └─────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 3: Copy Your iFrame ID
+
+   You'll see something like:
+
+   ┌─────────────────────────────────────────────────┐
+   │ iFrames                                          │
+   ├─────────────────────────────────────────────────┤
+   │                                                  │
+   │  Name: Card Payment iFrame                      │
+   │  iFrame ID: 876543  ← COPY THIS NUMBER!        │
+   │  Status: Active                                  │
+   │  Integration: Card Payment                       │
+   │                                                  │
+   └─────────────────────────────────────────────────┘
+
+   Note: Your iFrame ID will be different from 876543!
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 4: Update .env File
+
+   Open: /home/believer/auravibe/.env
+
+   Change this line:
+   ❌ PAYMOB_IFRAME_ID=5362354
+
+   To your actual iFrame ID:
+   ✅ PAYMOB_IFRAME_ID=876543  ← Use YOUR number!
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 5: Restart Server
+
+   Terminal:
+   $ cd /home/believer/auravibe
+   $ ./start.sh
+
+═══════════════════════════════════════════════════════════════
+
+📍 STEP 6: Test Checkout
+
+   → Your payment page should now display correctly! 🎉
+
+═══════════════════════════════════════════════════════════════
+
+💡 UNDERSTANDING THE DIFFERENCE:
+
+   Integration ID (5362354):
+   → Identifies which PAYMENT METHOD (Card/Wallet/etc.)
+   → Used when creating payment request
+   → You have this CORRECT ✓
+
+   iFrame ID (??????):
+   → Identifies which PAYMENT PAGE to display
+   → Used for showing the payment form to customer
+   → This is what you need to find! ⚠️
+
+   Both are needed, but serve different purposes!
+
+═══════════════════════════════════════════════════════════════
+
+❓ CAN'T FIND YOUR IFRAME?
+
+   1. Make sure you're looking in: Developers → iFrames
+      (NOT Developers → Integrations)
+
+   2. If the iFrames page is empty:
+      → Click "Create New iFrame"
+      → Select your Card Payment integration
+      → Copy the new iFrame ID
+
+   3. Still stuck? Contact Paymob Support:
+      → Live Chat (icon in bottom right of dashboard)
+      → Email: support@paymob.com
+      → Ask: "What is my iFrame ID?"
+
+═══════════════════════════════════════════════════════════════
+
+✅ VERIFICATION:
+
+   Run this to check your config:
+   → http://localhost:8000/check-paymob-config.php
+
+   It will show RED if iFrame ID = Integration ID
+   It will show GREEN when you use correct iFrame ID
+
+═══════════════════════════════════════════════════════════════
