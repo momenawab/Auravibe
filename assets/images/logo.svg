@@ -1,0 +1,18 @@
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F4E4B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C9A65C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Watch Circle -->
+  <circle cx="35" cy="40" r="25" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+  <line x1="35" y1="40" x2="35" y2="25" stroke="url(#goldGradient)" stroke-width="2"/>
+  <line x1="35" y1="40" x2="45" y2="45" stroke="url(#goldGradient)" stroke-width="2"/>
+
+  <!-- AV Text -->
+  <text x="70" y="35" font-family="'Playfair Display', serif" font-size="24" font-weight="700" fill="url(#goldGradient)">AV</text>
+  <text x="70" y="55" font-family="Montserrat, sans-serif" font-size="10" font-weight="400" fill="url(#goldGradient)" letter-spacing="2">AURA VIBE</text>
+</svg>
